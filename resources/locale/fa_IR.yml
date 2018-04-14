@@ -13,5 +13,4 @@ flagrow-telegram:
 
         settings:
             notify_by_telegram_heading: تلگرام
-            unblock_telegram_bot: It seems like you did not authorize or blocked the Telegram bot. Send a message to <a>{username}</a> on Telegram to re-enable notifications
             unblock_telegram_bot: به نظر میرسد شما یا اجازه دسترسی به روبات ندادید یا اینکه آن را بلاک کردید. پیامی به <a>{username}</a> ارسال کنید تا اعلانات را دوباره فعال سازی کنید.
