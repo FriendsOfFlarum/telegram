@@ -1,0 +1,16 @@
+flagrow-telegram:
+    admin:
+        settings:
+            title: Telegram Ustawienia
+
+            field:
+                botUsername: Bot Username
+                botToken: Bot Token
+                enableNotifications: Włącz powiadomienia
+
+    forum:
+        log_in_with_telegram_button: Zaloguj przez Telegram
+
+        settings:
+            notify_by_telegram_heading: Telegram
+            unblock_telegram_bot: Wygląda na to, że nie autoryzowałeś lub nie blokowałeś bota Telegramu. Wyślij wiadomość do <a>{username}</a> w Telegramie, aby ponownie włączyć powiadomienia.
