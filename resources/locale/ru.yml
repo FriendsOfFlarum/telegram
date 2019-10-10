@@ -1,0 +1,17 @@
+flagrow-telegram:
+    admin:
+        settings:
+            title: Настройки Telegram
+
+            field:
+                botUsername: Имя бота
+                botToken: Токен бота
+                enableNotifications: Включить уведомления
+
+    forum:
+        log_in_with_telegram_button: Войти через Telegram
+        link_telegram_button: Привязать Telegram
+
+        settings:
+            notify_by_telegram_heading: Telegram
+            unblock_telegram_bot: Похоже вы не авторизовали или заблокировали бота. Отправьте сообщение <a>{username}</a> в телеграме для включения уведомлений

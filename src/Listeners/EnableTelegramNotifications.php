@@ -2,7 +2,7 @@
 
 namespace Flagrow\Telegram\Listeners;
 
-use Flarum\Core\User;
+use Flarum\User\User;
 use Flarum\Event\ConfigureNotificationTypes;
 use Flarum\Settings\SettingsRepositoryInterface;
 use Illuminate\Contracts\Events\Dispatcher;
@@ -32,6 +32,10 @@ class EnableTelegramNotifications
             'postMentioned',
             'userMentioned',
             'newPost',
+            'newDiscussionInTag',
+            'newPostInTag',
+            'discussionCreated', // for fof/subscribed extension
+            'userCreated', // for fof/subscribed extension
         ];
 
         foreach ($telegramCompatibleTypes as $type) {

@@ -3,9 +3,9 @@
 namespace Flagrow\Telegram\Notifications;
 
 use Exception;
-use Flarum\Core\Notification\BlueprintInterface;
-use Flarum\Core\Notification\MailableInterface;
-use Flarum\Core\User;
+use Flarum\Notification\Blueprint\BlueprintInterface;
+use Flarum\Notification\MailableInterface;
+use Flarum\User\User;
 use Flarum\Settings\SettingsRepositoryInterface;
 use GuzzleHttp\Client;
 use GuzzleHttp\Exception\ClientException;
@@ -31,7 +31,7 @@ class TelegramMailer
         $this->views = $views;
     }
 
-    public function send(BlueprintInterface $blueprint, User $user)
+    public function send(BlueprintInterface $blueprint, User $user, $telegram_id)
     {
         if ($blueprint instanceof MailableInterface) {
             $view = $this->pickBestView($blueprint->getEmailView());
@@ -43,8 +43,8 @@ class TelegramMailer
 
         try {
             $this->client->post('sendMessage', [
-                'json' => [
-                    'chat_id' => $user->flagrow_telegram_id,
+                'query' => [
+                    'chat_id' => (int)$telegram_id,
                     'text' => $text,
                     'parse_mode' => 'HTML',
                 ],

@@ -16,6 +16,11 @@
             "name": "Clark Winkelmann",
             "email": "clark.winkelmann@gmail.com",
             "homepage": "https://clarkwinkelmann.com/"
+        },
+        {
+            "name": "Evgenij Spitsyn",
+            "email": "evgeniy@spitsyn.net",
+            "homepage": "https://spitsyn.net/"
         }
     ],
     "support": {
@@ -23,13 +28,13 @@
         "source": "https://github.com/flagrow/telegram"
     },
     "require": {
-        "flarum/core": "^0.1.0-beta.7"
+        "flarum/core": "^0.1.0-beta.10"
     },
     "extra": {
         "flarum-extension": {
             "title": "Flagrow Telegram",
             "icon": {
-                "name": "telegram",
+                "name": "fab fa-telegram-plane",
                 "backgroundColor": "#f4f4f4",
                 "color": "#5f4bb6"
             }

@@ -3,7 +3,7 @@
 namespace Flagrow\Telegram\Listeners;
 
 use Flarum\Api\Serializer\ForumSerializer;
-use Flarum\Event\PrepareApiAttributes;
+use Flarum\Api\Event\Serializing;
 use Flarum\Settings\SettingsRepositoryInterface;
 use Illuminate\Contracts\Events\Dispatcher;
 
@@ -18,10 +18,10 @@ class InjectSettings
 
     public function subscribe(Dispatcher $events)
     {
-        $events->listen(PrepareApiAttributes::class, [$this, 'settings']);
+        $events->listen(Serializing::class, [$this, 'settings']);
     }
 
-    public function settings(PrepareApiAttributes $event)
+    public function settings(Serializing $event)
     {
         if ($event->serializer instanceof ForumSerializer) {
             $event->attributes['flagrow-telegram.enableNotifications'] = (bool)$this->settings->get('flagrow-telegram.enableNotifications');

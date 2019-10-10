@@ -10,6 +10,7 @@ flagrow-telegram:
 
     forum:
         log_in_with_telegram_button: Log in with Telegram
+        link_telegram_button: Link Telegram
 
         settings:
             notify_by_telegram_heading: Telegram
